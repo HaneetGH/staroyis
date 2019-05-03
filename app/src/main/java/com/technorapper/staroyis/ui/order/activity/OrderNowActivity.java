@@ -1,7 +1,13 @@
 package com.technorapper.staroyis.ui.order.activity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
@@ -11,6 +17,7 @@ import com.technorapper.staroyis.apater.AddressListAdapter;
 import com.technorapper.staroyis.apater.CartProductListAdapter;
 import com.technorapper.staroyis.apater.ProductListAdapter;
 import com.technorapper.staroyis.databinding.ActivityOrderBinding;
+import com.technorapper.staroyis.databinding.DialogSaveAddressBinding;
 import com.technorapper.staroyis.global.BaseActivity;
 import com.technorapper.staroyis.interfaces.RecyclerViewClickListener;
 import com.technorapper.staroyis.ui.detail.activity.ProductDetailActivity;
@@ -89,6 +96,23 @@ public class OrderNowActivity extends BaseActivity implements RecyclerViewClickL
             viewModel.SaveAddress(OrderNowActivity.this, 10, add1, add2, city, state, pincode, contactp, contactPN);
         }
 
+        public void addSaveDialog() {
+            openDialog();
+        }
+
 
     }
+
+    private void openDialog() {
+
+
+        DialogSaveAddressBinding binding = DataBindingUtil
+                .inflate(LayoutInflater.from(OrderNowActivity.this), R.layout.dialog_save_address, null, false);
+        binding.setHandler(new ClickHandler());
+        Dialog dialog = new Dialog(OrderNowActivity.this);
+        dialog.setContentView(binding.getRoot());
+        dialog.show();;
+
+    }
+
 }

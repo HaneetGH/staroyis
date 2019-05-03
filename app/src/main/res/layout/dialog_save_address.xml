@@ -16,7 +16,7 @@
         <LinearLayout
             android:id="@+id/AddBlock"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
@@ -25,48 +25,48 @@
 
                 android:id="@+id/adress1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Address 1" />
 
             <EditText
 
                 android:id="@+id/adress2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Address 2" />
 
             <EditText
 
                 android:id="@+id/city"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="City" />
             <EditText
 
                 android:id="@+id/pincode"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Pin Code" />
 
             <EditText
 
                 android:id="@+id/state"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="State" />
 
             <EditText
 
                 android:id="@+id/contactperon"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Contact Person " />
 
             <EditText
 
                 android:id="@+id/contactnumber"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Contact Person Number " />
 
             <Button

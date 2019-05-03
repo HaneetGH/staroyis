@@ -62,6 +62,8 @@
                     tools:context="com.google.samples.apps.sunflower.GardenActivity"></androidx.recyclerview.widget.RecyclerView>
 
                 <TextView
+                    android:onClick="@{()->handler.addSaveDialog()}"
+
                     android:gravity="right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
