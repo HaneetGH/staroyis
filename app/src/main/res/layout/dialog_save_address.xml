@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.technorapper.staroyis.ui.order.activity.OrderNowActivity.ClickHandler" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/AddBlock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+
+                android:id="@+id/adress1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Address 1" />
+
+            <EditText
+
+                android:id="@+id/adress2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Address 2" />
+
+            <EditText
+
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="City" />
+            <EditText
+
+                android:id="@+id/pincode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Pin Code" />
+
+            <EditText
+
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="State" />
+
+            <EditText
+
+                android:id="@+id/contactperon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Contact Person " />
+
+            <EditText
+
+                android:id="@+id/contactnumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Contact Person Number " />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+
+                android:layout_marginRight="@dimen/_40sdp"
+                android:background="@color/green"
+                android:onClick="@{()->handler.saveAdd(adress1.getText().toString(),adress2.getText().toString(),city.getText().toString(),state.getText().toString(),pincode.getText().toString(),contactperon.getText().toString(),contactnumber.getText().toString())}"
+                android:text="SAVE ADDRESS" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

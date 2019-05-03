@@ -19,11 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 public class CartProductListAdapter extends RecyclerView.Adapter<CartProductListAdapter.MyViewHolder> {
 
     private List<Item> material;
+    private RecyclerViewClickListener mListener;
 
-
-    public CartProductListAdapter(List<Item> material) {
+    public CartProductListAdapter(List<Item> material, RecyclerViewClickListener mListener) {
         this.material = material;
-
+        this.mListener = mListener;
 
     }
 
@@ -34,6 +34,8 @@ public class CartProductListAdapter extends RecyclerView.Adapter<CartProductList
             super(binding.getRoot());
             this.binding = binding;
         }
+
+
     }
 
     @Override
@@ -46,7 +48,13 @@ public class CartProductListAdapter extends RecyclerView.Adapter<CartProductList
     @Override
     public void onBindViewHolder(final CartProductListAdapter.MyViewHolder holder, final int position) {
         holder.binding.setModel(material.get(position));
-
+        holder.binding.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null)
+                    mListener.onClick(v, position);
+            }
+        });
     }
 
 

@@ -21,8 +21,12 @@ public class OrderViewModel extends AndroidViewModel {
         context = application;
     }
 
-    public void fetchAddress(Activity mContext,int idn) {
-        Api.getAdddressList("1829CTF2CC6DD",idn ,data);
+    public void fetchAddress(Activity mContext, int idn) {
+        Api.getAdddressList("1829CTF2CC6DD", idn, data);
+    }
+
+    public void SaveAddress(Activity mContext, int idn, String add1, String add2, String city, String state, String pincode, String contactp, String contactPN) {
+        Api.saveAdddress("1829CTF2CC6DD", idn, add1, add2, city, state, pincode, contactp, contactPN, dataSave);
     }
 
 

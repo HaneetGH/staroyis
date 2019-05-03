@@ -24,7 +24,9 @@
         <activity android:name=".ui.order.activity.OrderNowActivity"/>
         <activity android:name=".ui.account.login.activity.LoginActivity">
 
+
         </activity>
+
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@ import androidx.lifecycle.LifecycleOwner;
 public abstract class BaseActivity extends AppCompatActivity {
     public static AllProductModel allProductModel;
     public static OrderItemModel orderItemModel;
-
+    public  static OrderItemModel orderItemModelNow;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {

@@ -163,6 +163,8 @@ android:id="@+id/price"
                     android:weightSum="1">
 
                     <Button
+                        android:onClick="@{()->handler.addToCard(price.getText().toString(),quanitity.getText().toString())}"
+
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"

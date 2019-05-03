@@ -8,47 +8,47 @@ public class Item {//product_name
 
     @SerializedName("product_id")
     @Expose
-    private Integer productId;
+    private String productId;
 
-    public Integer getProduct_name() {
+    public String getProduct_name() {
         return product_name;
     }
 
-    public void setProduct_name(Integer product_name) {
+    public void setProduct_name(String product_name) {
         this.product_name = product_name;
     }
 
     @SerializedName("product_name")
     @Expose
-    private Integer product_name;
+    private String product_name;
     @SerializedName("quantity")
     @Expose
-    private Integer quantity;
+    private String quantity;
     @SerializedName("price")
     @Expose
-    private Integer price;
+    private String price;
 
-    public Integer getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(Integer productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
-    public Integer getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
