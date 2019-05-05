@@ -18,10 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CartProductListAdapter extends RecyclerView.Adapter<CartProductListAdapter.MyViewHolder> {
 
-    private List<Item> material;
+    private List<com.technorapper.staroyis.ui.order.model.order.Item> material;
     private RecyclerViewClickListener mListener;
 
-    public CartProductListAdapter(List<Item> material, RecyclerViewClickListener mListener) {
+    public CartProductListAdapter(List<com.technorapper.staroyis.ui.order.model.order.Item> material, RecyclerViewClickListener mListener) {
         this.material = material;
         this.mListener = mListener;
 

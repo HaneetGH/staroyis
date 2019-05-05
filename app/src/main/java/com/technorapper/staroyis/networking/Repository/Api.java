@@ -2,14 +2,19 @@ package com.technorapper.staroyis.networking.Repository;
 
 import android.app.Activity;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.technorapper.staroyis.networking.ApiUtils;
 import com.technorapper.staroyis.networking.StaroyisApi;
+import com.technorapper.staroyis.ui.order.model.Item;
+
+import java.util.List;
 
 import androidx.lifecycle.MutableLiveData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.Query;
 
 public class Api {
     private static StaroyisApi staroyisApi = ApiUtils.getBaseUrl();
@@ -30,8 +35,9 @@ public class Api {
 
     }
 
-    public static void getAdddressList(String token, int id, final MutableLiveData<JsonObject> data) {
-        staroyisApi.GetAllAddresst(token, id).enqueue(new Callback<JsonObject>() {
+
+    public static void sendOrder(JsonObject jsonElements, final MutableLiveData<JsonObject> data) {
+        staroyisApi.Order(jsonElements).enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                 data.setValue(response.body());
@@ -40,6 +46,26 @@ public class Api {
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
                 data.setValue(null);
+            }
+        });
+
+
+    }
+
+    public static void getAdddressList(String token, int id, final MutableLiveData<JsonObject> data) {
+        staroyisApi.GetAllAddresst(token, id).enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+                data.setValue(response.body());
+
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+
+                data.setValue(null);
+
             }
         });
 
