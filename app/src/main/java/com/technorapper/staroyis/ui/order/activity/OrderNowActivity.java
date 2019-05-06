@@ -63,7 +63,13 @@ public class OrderNowActivity extends BaseActivity implements RecyclerViewClickL
         viewModel.dataSave.observe(this, new Observer<JsonObject>() {
             @Override
             public void onChanged(JsonObject jsonObject) {
-
+                if (jsonObject != null) {
+                    Snackbar snackbar = Snackbar
+                            .make(binding.getRoot(), jsonObject.get("message").getAsString(), Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                    Intent intent = new Intent(OrderNowActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         viewModel.data.observe(OrderNowActivity.this, new Observer<JsonObject>() {

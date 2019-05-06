@@ -78,11 +78,12 @@ public class LoginActivity extends BaseActivity {
     public class ClickHandler {
 
         public void login(String phone, String pass) {
-            if (phone.isEmpty() || pass.isEmpty()){
+            if (phone.isEmpty() || pass.isEmpty()) {
                 snackbar = Snackbar
                         .make(binding.getRoot(), "Credential Missing", Snackbar.LENGTH_LONG);
                 snackbar.show();
-                return;}
+                return;
+            }
             viewModel.login(phone, pass);
         }
 
